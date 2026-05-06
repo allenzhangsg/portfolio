@@ -13,5 +13,15 @@
   "assets": {
     "binding": "ASSETS",
     "directory": "dist"
-  }
+  },
+  "routes": [
+    {
+      "pattern": "allenzhangsg.com",
+      "zone_name": "allenzhangsg.com"
+    },
+    {
+      "pattern": "www.allenzhangsg.com",
+      "zone_name": "allenzhangsg.com"
+    }
+  ]
 }
