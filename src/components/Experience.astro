@@ -1,0 +1,74 @@
+---
+const roles = [
+  {
+    company: 'Connexion Mobility',
+    role: 'Software Engineer',
+    location: 'Melbourne, AU',
+    period: 'Nov 2024 — Present',
+    bullets: [
+      'Sole engineer; end-to-end owner across design, build, and operations.',
+      'Built a multi-tenant Insights Platform — embedded QuickSight across four microservices behind a React/Auth0 frontend, with two-layer authorisation (capability tree + S3-backed RLS) keeping OEM tenants isolated.',
+      'Shipped event-driven self-scheduled reports on EventBridge Scheduler, re-validating user access at delivery time so revoked users stop receiving reports immediately.',
+      'Owns ~20 data pipelines across three compute models (ECS Fargate batch, Lambda burst, Glue catalogue), each provisioned via AWS CDK with its own Sentry cron monitor.',
+      'Built a real-time GM compliance audit pipeline: MongoDB Change Streams → EventBridge → SQS FIFO → Lambda → DynamoDB with strict per-VIN ordering.',
+    ],
+  },
+  {
+    company: 'Tesla',
+    role: 'Senior Data Engineer',
+    location: 'Shanghai, CN',
+    period: 'Apr 2022 — May 2024',
+    bullets: [
+      'Designed a horizontally scalable internal analytics platform (Plotly Dash + React, Azure SSO) on Kubernetes — Flask/Gunicorn + Celery to keep long queries off the request path, Redis for hot data.',
+      'Eliminated manual log parsing at remote contract manufacturers via Ansible-deployed containerised parsers — automated ingestion gave engineering near-real-time test visibility.',
+      'Replaced manual reporting cycles across multiple stakeholder groups with Airflow DAGs and Bootstrap Email templating.',
+    ],
+  },
+  {
+    company: 'Meituan',
+    role: 'Data Engineer',
+    location: 'Beijing, CN',
+    period: 'Feb 2020 — Apr 2022',
+    bullets: [
+      'Designed dimensional fact/dimension models over Hadoop/Hive, tuned partitioning to keep daily ETLs in window, and exposed modelled tables through internal dashboards.',
+      'Built a paid pharma analytics dashboard on Apache Doris OLAP, exposing market-performance and supply-chain views over large-scale platform data.',
+      'Built Spark MLlib pipelines for consumer–product correlation and recommender models that drove segmentation for marketing campaigns.',
+    ],
+  },
+];
+---
+
+<section class="section" id="exp">
+  <h2>Experience</h2>
+  <ol class="list">
+    {roles.map((r) => (
+      <li class="role">
+        <div class="head">
+          <h3>{r.company}</h3>
+          <span class="period">{r.period}</span>
+        </div>
+        <p class="sub">{r.role} · {r.location}</p>
+        <ul class="points">
+          {r.bullets.map((b) => <li>{b}</li>)}
+        </ul>
+      </li>
+    ))}
+  </ol>
+</section>
+
+<style>
+  .list { display: flex; flex-direction: column; gap: 32px; }
+  .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .head h3 { font-size: 17px; font-weight: 600; }
+  .period { font-size: 14px; color: var(--muted); }
+  .sub { font-size: 15px; color: var(--muted); margin: 2px 0 10px; }
+  .points { display: flex; flex-direction: column; gap: 8px; padding-left: 20px; list-style: disc; color: var(--muted); }
+  .points li { font-size: 15px; line-height: 1.6; }
+  .points li::marker { color: var(--rule); }
+</style>

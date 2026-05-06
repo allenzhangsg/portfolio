@@ -1,0 +1,37 @@
+---
+---
+
+<section class="section">
+  <h2>Projects</h2>
+  <article class="proj">
+    <div class="head">
+      <h3>Sigmise</h3>
+      <a href="https://sigmise.com">sigmise.com</a>
+    </div>
+    <p class="sub">Solo founder · cross-platform AI meeting copilot for live transcription, translation, and notes.</p>
+    <ul class="points">
+      <li>Owned the full vertical — Electron + React desktop client (Windows/macOS, signed &amp; notarised), Node.js backend, Next.js marketing site, and a self-hosted Prometheus + Grafana observability stack with Telegram alerting.</li>
+      <li>Real-time audio pipeline — low-latency WebSocket capture (system audio + mic separately), streamed to Azure Speech / Deepgram for diarized transcription, with rolling-context live summaries.</li>
+      <li>Local-first sync — SQLite client, PostgreSQL + Drizzle server, lazy R2 file downloads, last-writer-wins conflict resolution. Full offline functionality.</li>
+      <li>Production AI integration — Gemini via OpenRouter (Vercel AI SDK) for post-meeting summaries, streaming chat over notes, and rolling live summaries; same provider drop-in for translation.</li>
+      <li>Delivery &amp; observability — GitHub Actions → GHCR → Coolify with lint/typecheck gating; signed installers and electron-updater channel with force-update support.</li>
+    </ul>
+  </article>
+</section>
+
+<style>
+  .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .head h3 { font-size: 17px; font-weight: 600; }
+  .head a { font-size: 14px; color: var(--muted); border-bottom: 1px solid var(--rule); }
+  .head a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .sub { font-size: 15px; color: var(--muted); margin: 2px 0 10px; }
+  .points { display: flex; flex-direction: column; gap: 8px; padding-left: 20px; list-style: disc; color: var(--muted); }
+  .points li { font-size: 15px; line-height: 1.6; }
+  .points li::marker { color: var(--rule); }
+</style>

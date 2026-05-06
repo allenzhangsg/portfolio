@@ -1,0 +1,36 @@
+---
+const groups = [
+  { label: 'Backend', items: 'Node.js, Express, WebSocket, PostgreSQL, SQLite, Better Auth, Auth0, Flask, Celery' },
+  { label: 'Frontend', items: 'React, Next.js, Astro, Electron, Tailwind CSS, Vite' },
+  { label: 'AI / LLM', items: 'Vercel AI SDK, OpenRouter, Gemini, Azure Speech, Deepgram, prompt engineering' },
+  { label: 'Cloud & Ops', items: 'AWS (Lambda, ECS, S3, DynamoDB, EventBridge, API Gateway, Glue, QuickSight), Cloudflare R2, Docker, Kubernetes, GitHub Actions, Coolify, Prometheus, Grafana, Sentry' },
+  { label: 'Data', items: 'Apache Spark, Hadoop, Apache Doris, MongoDB, Redis, ClickHouse, Pandas, Airflow, dimensional modelling' },
+];
+---
+
+<section class="section">
+  <h2>Skills</h2>
+  <dl>
+    {groups.map((g) => (
+      <div class="row">
+        <dt>{g.label}</dt>
+        <dd>{g.items}</dd>
+      </div>
+    ))}
+  </dl>
+</section>
+
+<style>
+  dl { display: flex; flex-direction: column; gap: 12px; }
+  .row {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 16px;
+    font-size: 15px;
+  }
+  dt { font-weight: 600; color: var(--ink); }
+  dd { margin: 0; color: var(--muted); line-height: 1.6; }
+  @media (max-width: 600px) {
+    .row { grid-template-columns: 1fr; gap: 2px; }
+  }
+</style>

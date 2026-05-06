@@ -1,0 +1,19 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="foot">
+  <p>© {year} Allen Zhang · <a href="mailto:zhangsg2013@gmail.com">zhangsg2013@gmail.com</a></p>
+</footer>
+
+<style>
+  .foot {
+    margin-top: 96px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .foot a { color: var(--muted); border-bottom-color: var(--rule); }
+  .foot a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+</style>

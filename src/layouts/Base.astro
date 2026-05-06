@@ -1,0 +1,35 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Allen Zhang — Senior Software Engineer',
+  description = 'Allen Zhang (Shiguang Zhang) — senior software engineer based in Melbourne. Distributed systems, AI/LLM integration, full-stack product engineering.',
+} = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://allenzhangsg.com').toString();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
