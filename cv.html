@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Shiguang Zhang — Senior Software Engineer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --ink: #111;
+    --muted: #555;
+    --rule: #e2e2e2;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #ececec;
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI Variable", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-feature-settings: "liga", "kern";
+    font-size: 10pt;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    background: #fff;
+    width: 210mm;
+    min-height: 297mm;
+    margin: 24px auto;
+    padding: 18mm 20mm;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+    margin-bottom: 6px;
+  }
+  .header-left {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .header-left h1 {
+    font-size: 22pt;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: -0.015em;
+    white-space: nowrap;
+  }
+  .header-left .headline {
+    font-size: 10.5pt;
+    color: var(--muted);
+    margin: 2px 0 0 0;
+    font-weight: 400;
+  }
+  .header-left .tags {
+    font-size: 9.5pt;
+    color: var(--muted);
+    margin: 1px 0 0 0;
+  }
+  .header-right {
+    text-align: right;
+    font-size: 9.5pt;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+  a { color: var(--muted); text-decoration: underline; text-underline-offset: 2px; }
+
+  /* Section */
+  section { margin-top: 10px; }
+  h2 {
+    font-size: 9pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--ink);
+    margin: 0 0 5px 0;
+    padding-bottom: 3px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  p { margin: 4px 0; }
+
+  /* Entry (job, project, education) */
+  .entry { margin: 4px 0 6px 0; }
+  .entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .entry-title {
+    font-size: 10.5pt;
+    font-weight: 600;
+    margin: 0;
+  }
+  .entry-title .role {
+    font-weight: 400;
+  }
+  .entry-sub {
+    font-size: 9.5pt;
+    color: var(--muted);
+    margin: 1px 0 4px 0;
+  }
+  .entry-meta {
+    font-size: 9.5pt;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .entry-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .entry-company {
+    font-size: 10.5pt;
+    font-weight: 600;
+  }
+  .entry-position {
+    font-size: 10pt;
+    font-weight: 400;
+    margin: 1px 0 0 0;
+  }
+
+  ul {
+    margin: 3px 0 0 0;
+    padding-left: 16px;
+  }
+  li { margin: 1px 0; }
+
+  .stack {
+    font-size: 9pt;
+    color: var(--muted);
+    margin: 2px 0 4px 0;
+  }
+  .stack .sep {
+    color: var(--rule);
+  }
+
+  code {
+    font-family: ui-monospace, "SF Mono", "Cascadia Mono", "Consolas", monospace;
+    font-size: 9pt;
+    background: #f3f3f3;
+    padding: 0 3px;
+    border-radius: 2px;
+  }
+
+  /* Skills */
+  .skills {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    column-gap: 16px;
+    row-gap: 4px;
+    font-size: 9.5pt;
+  }
+  .skills .label {
+    color: var(--muted);
+    font-weight: 600;
+  }
+
+  /* Certifications */
+  .certs {
+    font-size: 9.5pt;
+    color: var(--muted);
+  }
+  .certs span:not(:last-child)::after {
+    content: " | ";
+    color: var(--rule);
+  }
+
+  /* Print */
+  @page {
+    size: A4;
+    margin: 18mm 20mm;
+  }
+  @media print {
+    html, body { background: #fff; }
+    .page {
+      box-shadow: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 0;
+    }
+    h2 { break-after: avoid; }
+    .entry-header, .entry-row, .entry-title { break-after: avoid; }
+    li { break-inside: avoid; }
+    a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <div class="header-left">
+    <h1>Shiguang (Allen) Zhang</h1>
+    <p class="headline">Senior Software Engineer</p>
+    <p class="tags">Melbourne, Australia</p>
+  </div>
+  <div class="header-right">
+    <div>0468 913 273</div>
+    <div><a href="mailto:zhangsg2013@gmail.com">zhangsg2013@gmail.com</a></div>
+    <div><a href="https://github.com/allenzhangsg">github.com/allenzhangsg</a></div>
+    <div><a href="https://www.linkedin.com/in/shiguang-zhang/">linkedin.com/in/shiguang-zhang</a></div>
+  </div>
+</header>
+
+<section>
+  <h2>Summary</h2>
+  <p>
+    Software engineer with 5+ years building distributed systems on AWS, data ETL pipelines, and full-stack
+    applications at Connexion Mobility, Tesla, and Meituan. Currently shipping a side project,
+    Sigmise — a cross-platform AI meeting copilot spanning backend, Electron desktop client,
+    Next.js marketing site, CI/CD, and self-hosted observability. Strong in real-time systems, AI/LLM
+    integration, and shipping product end-to-end across the stack. Full Australian work rights — no employer sponsorship required.
+  </p>
+</section>
+
+<section>
+  <h2>Experience</h2>
+
+  <div class="entry">
+    <div class="entry-row">
+      <span class="entry-company">Connexion Mobility Ltd</span>
+      <span class="entry-meta">Nov 2024 – Present</span>
+    </div>
+    <div class="entry-row">
+      <span class="entry-position">Software Engineer</span>
+      <span class="entry-meta">Melbourne, Australia</span>
+    </div>
+    <p class="entry-sub">Sole software engineer; end-to-end owner across design, build, and operations.</p>
+    <ul>
+      <li><strong>Multi-tenant Insights Platform</strong> — built an embedded-QuickSight analytics product for automotive dealers across four microservices (configuration, authoriser, visualisation, delivery) behind a React/Auth0 frontend. Designed two-layer authorisation: a capability tree gating modules and routes, plus user-based row-level security via an S3-backed RLS table — OEM tenants stay isolated when sharing datasets, and every backend rechecks against the authoriser.</li>
+      <li><strong>Event-driven self-scheduled reports</strong> — built a report-scheduling system on EventBridge Scheduler with definitions in DynamoDB and asynchronous QuickSight snapshot generation. Re-validated user access at delivery time (not creation time), so revoked users stopped receiving reports immediately. Handed off to a separate delivery service via cross-account IAM.</li>
+      <li><strong>Data-pipeline tier (~20 pipelines)</strong> — owned the report-data service with ~20 pipelines across three compute models matched to workload shape: long, stateful batch on ECS Fargate (EventBridge-triggered, scale-to-zero); bursty event-driven work on Lambda; data-lake catalogue upkeep via Glue Crawler. Each pipeline ships as an independent ECS task provisioned via AWS CDK, with its own Sentry cron monitor — missed runs alert separately from failed runs.</li>
+      <li><strong>Real-time audit pipeline</strong> — built an immutable GM compliance audit store with strict per-VIN ordering: MongoDB Change Streams → EventBridge → SQS FIFO (with DLQ) → Lambda → DynamoDB, indexed by a timestamp GSI for range queries.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-row">
+      <span class="entry-company">Tesla</span>
+      <span class="entry-meta">Apr 2022 – May 2024</span>
+    </div>
+    <div class="entry-row">
+      <span class="entry-position">Senior Data Engineer</span>
+      <span class="entry-meta">Shanghai, China</span>
+    </div>
+    <ul>
+      <li><strong>Internal data-visualisation platform</strong> — designed a horizontally scalable analytics platform (Plotly Dash + React, Azure SSO) on Kubernetes — multi-replica deploys for high availability, Flask/Gunicorn + Celery to keep long-running queries off the request path, and Redis caching for hot data.</li>
+      <li><strong>Edge log-parser deployment</strong> — eliminated manual log parsing at remote contract manufacturers by deploying a containerised parser via Ansible — automated ingestion of test-result files into the upstream database, giving engineering near-real-time visibility into test outcomes.</li>
+      <li><strong>Reporting automation</strong> — automated end-to-end manufacturer reporting with Airflow DAGs orchestrating periodic data extracts and Bootstrap Email for templated delivery — replaced manual reporting cycles across multiple stakeholder groups.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-row">
+      <span class="entry-company">Meituan (3690.HK)</span>
+      <span class="entry-meta">Feb 2020 – Apr 2022</span>
+    </div>
+    <div class="entry-row">
+      <span class="entry-position">Data Engineer</span>
+      <span class="entry-meta">Beijing, China</span>
+    </div>
+    <ul>
+      <li><strong>Hive data-warehouse modelling</strong> — designed dimensional fact/dimension models over Hadoop/Hive, turning cross-domain business logic into reusable analytics layers; tuned query plans and partitioning to keep daily ETLs within window, and exposed the modelled tables through internal dashboards.</li>
+      <li><strong>Commercial pharma analytics product</strong> — built a paid dashboard product for global pharmaceutical corporates over an Apache Doris OLAP backend, exposing market-performance and supply-chain views with interactive analytical queries over large-scale Meituan platform data.</li>
+      <li><strong>ML-driven marketing analytics</strong> — built Spark MLlib pipelines for consumer–product correlation analysis and recommender models on top of the warehouse, surfacing customer segments that the marketing team translated into promotion design and personalised campaigns.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Selected Project</h2>
+
+  <div class="entry">
+    <div class="entry-header">
+      <div>
+        <p class="entry-title">Sigmise</p>
+        <p class="entry-position">Solo Founder &amp; Engineer</p>
+        <p class="entry-sub">Cross-platform desktop app for live transcription, translation &amp; AI notes</p>
+      </div>
+      <span class="entry-meta"><a href="https://sigmise.com">sigmise.com</a></span>
+    </div>
+    <ul>
+      <li><strong>Owned the full vertical end-to-end</strong> — Electron + React desktop client (Windows/macOS, signed &amp; notarised), Node.js backend, Next.js marketing site, and a self-hosted Prometheus + Grafana observability stack with Telegram alerting on a self-managed VPS.</li>
+      <li><strong>Real-time audio streaming pipeline</strong> — designed a low-latency WebSocket pipeline that captures system audio and microphone separately, encodes them, and streams to Azure Speech / Deepgram for diarized transcription — with rolling-context live summaries pushed back to the client during the meeting.</li>
+      <li><strong>Local-first sync architecture</strong> — SQLite on the client, PostgreSQL + Drizzle on the server, with metadata sync, lazy file downloads from Cloudflare R2, and last-writer-wins conflict resolution — full offline functionality with eventual consistency.</li>
+      <li><strong>Production AI integration</strong> — Gemini via OpenRouter (Vercel AI SDK) powering post-meeting summaries, streaming chat over recorded notes, and rolling-window live summaries during the meeting; extended the same provider to translation as a drop-in replacement for the Azure Translator API.</li>
+      <li><strong>Delivery pipeline &amp; observability</strong> — backend deployed via GitHub Actions → GHCR → Coolify (lint + typecheck gated); desktop app distributed via signed installers and an electron-updater channel with force-update support. Telegram-routed alerts cover memory leaks, resource thresholds, and service-down.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="label">Backend</div>
+    <div>Node.js, Express, WebSocket, PostgreSQL, SQLite, Better Auth, Auth0, Flask, Celery</div>
+
+    <div class="label">Frontend</div>
+    <div>React, Next.js, Electron, Tailwind CSS, Vite</div>
+
+    <div class="label">AI / LLM</div>
+    <div>Vercel AI SDK, OpenRouter, Gemini, Azure Speech, Deepgram, prompt engineering</div>
+
+    <div class="label">Cloud &amp; Ops</div>
+    <div>AWS (Lambda, ECS, S3, Glue, DynamoDB, API Gateway, EventBridge, Athena, IAM, QuickSight, Amplify), Cloudflare R2, Docker, Kubernetes, GitHub Actions, Coolify, IaC, CI/CD; Prometheus, Grafana, CloudWatch, Sentry, Alertmanager</div>
+
+    <div class="label">Data Engineering</div>
+    <div>Apache Spark, Hadoop, Apache Doris, MongoDB, Redis, ClickHouse, Pandas, Airflow, Dimensional Modelling</div>
+  </div>
+</section>
+
+<section>
+  <h2>Education</h2>
+
+  <div class="entry">
+    <div class="entry-row">
+      <span><span class="entry-company">Tianjin University</span> — Master of Computer Technology</span>
+      <span class="entry-meta">Sept 2017 – Jan 2020</span>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-row">
+      <span><span class="entry-company">Nanjing Forestry University</span> — Bachelor of Computer Science and Technology</span>
+      <span class="entry-meta">Sept 2013 – Jun 2017</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Certifications</h2>
+  <p class="certs">
+    <span>AWS Certified Developer – Associate</span>
+    <span>Distributed System (Educative)</span>
+    <span>Kubernetes (Educative)</span>
+  </p>
+</section>
+
+</div>
+</body>
+</html>
