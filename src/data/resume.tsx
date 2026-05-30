@@ -77,10 +77,30 @@ export const DATA = {
     { name: "Airflow" },
   ],
   certifications: [
-    { name: "AWS Certified Solutions Architect – Associate" },
-    { name: "AWS Certified Developer – Associate" },
-    { name: "Distributed System (Educative)" },
-    { name: "Kubernetes (Educative)" },
+    {
+      name: "AWS Certified Solutions Architect – Associate",
+      issuer: "Amazon Web Services",
+      href: "https://aws.amazon.com/certification/certified-solutions-architect-associate/",
+      logoUrl: "https://www.google.com/s2/favicons?domain=aws.amazon.com&sz=128",
+    },
+    {
+      name: "AWS Certified Developer – Associate",
+      issuer: "Amazon Web Services",
+      href: "https://aws.amazon.com/certification/certified-developer-associate/",
+      logoUrl: "https://www.google.com/s2/favicons?domain=aws.amazon.com&sz=128",
+    },
+    {
+      name: "Distributed System",
+      issuer: "Educative",
+      href: "https://www.educative.io/",
+      logoUrl: "https://www.google.com/s2/favicons?domain=educative.io&sz=128",
+    },
+    {
+      name: "Kubernetes",
+      issuer: "Educative",
+      href: "https://www.educative.io/",
+      logoUrl: "https://www.google.com/s2/favicons?domain=educative.io&sz=128",
+    },
   ],
   navbar: [
     { href: "/", icon: House, label: "Home" },
