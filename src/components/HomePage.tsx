@@ -102,6 +102,24 @@ const sectionComponents: Record<string, React.ReactNode> = {
       </div>
     </section>
   ),
+  certifications: (
+    <section id="certifications">
+      <div className="flex min-h-0 flex-col gap-y-4">
+        <BlurFade delay={BLUR_FADE_DELAY * 9}>
+          <h2 className="text-xl font-bold">{DATA.sections.certifications.heading}</h2>
+        </BlurFade>
+        <div className="flex flex-wrap gap-2">
+          {DATA.certifications.map((certification, id) => (
+            <BlurFade key={certification.name} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
+              <div className="border bg-background border-border ring-2 ring-border/20 rounded-xl h-8 w-fit px-4 flex items-center gap-2">
+                <span className="text-foreground text-sm font-medium">{certification.name}</span>
+              </div>
+            </BlurFade>
+          ))}
+        </div>
+      </div>
+    </section>
+  ),
   projects: (
     <section id="projects">
       <BlurFade delay={BLUR_FADE_DELAY * 11}>

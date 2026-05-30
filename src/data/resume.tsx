@@ -33,18 +33,19 @@ export const DATA = {
     },
     skills: { order: 4, enabled: true, heading: "Skills" },
     education: { order: 5, enabled: true, heading: "Education" },
+    certifications: { order: 6, enabled: true, heading: "Certifications" },
     hackathons: {
-      order: 6, enabled: false,
+      order: 7, enabled: false,
       label: "Hackathons",
       heading: "",
       text: "",
     },
     photos: {
-      order: 7, enabled: false,
+      order: 8, enabled: false,
       heading: "",
     },
     contact: {
-      order: 8, enabled: true,
+      order: 9, enabled: true,
       label: "Contact",
       heading: "Get in Touch",
       text: "Looking for an engineer who ships end-to-end? Send me a note — happy to chat.",
@@ -74,6 +75,12 @@ export const DATA = {
     { name: "Redis" },
     { name: "Apache Spark" },
     { name: "Airflow" },
+  ],
+  certifications: [
+    { name: "AWS Certified Solutions Architect – Associate" },
+    { name: "AWS Certified Developer – Associate" },
+    { name: "Distributed System (Educative)" },
+    { name: "Kubernetes (Educative)" },
   ],
   navbar: [
     { href: "/", icon: House, label: "Home" },
