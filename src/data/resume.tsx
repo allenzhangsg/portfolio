@@ -33,18 +33,19 @@ export const DATA = {
     },
     skills: { order: 4, enabled: true, heading: "Skills" },
     education: { order: 5, enabled: true, heading: "Education" },
+    certifications: { order: 6, enabled: true, heading: "Certifications" },
     hackathons: {
-      order: 6, enabled: false,
+      order: 7, enabled: false,
       label: "Hackathons",
       heading: "",
       text: "",
     },
     photos: {
-      order: 7, enabled: false,
+      order: 8, enabled: false,
       heading: "",
     },
     contact: {
-      order: 8, enabled: true,
+      order: 9, enabled: true,
       label: "Contact",
       heading: "Get in Touch",
       text: "Looking for an engineer who ships end-to-end? Send me a note — happy to chat.",
@@ -74,6 +75,32 @@ export const DATA = {
     { name: "Redis" },
     { name: "Apache Spark" },
     { name: "Airflow" },
+  ],
+  certifications: [
+    {
+      name: "AWS Certified Solutions Architect – Associate",
+      issuer: "Amazon Web Services",
+      href: "https://www.credly.com/badges/929cda4a-0491-48a7-87d3-3f4f6d63d198/linked_in?t=tfhpg4",
+      logoUrl: "https://www.google.com/s2/favicons?domain=aws.amazon.com&sz=128",
+    },
+    {
+      name: "AWS Certified Developer – Associate",
+      issuer: "Amazon Web Services",
+      href: "https://www.credly.com/badges/3c979bcf-f6d8-4f9e-8f9d-2ab6e4bb3f2d/linked_in?t=tagumj",
+      logoUrl: "https://www.google.com/s2/favicons?domain=aws.amazon.com&sz=128",
+    },
+    {
+      name: "Distributed System",
+      issuer: "Educative",
+      href: "https://www.educative.io/",
+      logoUrl: "https://www.google.com/s2/favicons?domain=educative.io&sz=128",
+    },
+    {
+      name: "Kubernetes",
+      issuer: "Educative",
+      href: "https://www.educative.io/",
+      logoUrl: "https://www.google.com/s2/favicons?domain=educative.io&sz=128",
+    },
   ],
   navbar: [
     { href: "/", icon: House, label: "Home" },
