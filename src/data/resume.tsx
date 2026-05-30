@@ -80,13 +80,13 @@ export const DATA = {
     {
       name: "AWS Certified Solutions Architect – Associate",
       issuer: "Amazon Web Services",
-      href: "https://aws.amazon.com/certification/certified-solutions-architect-associate/",
+      href: "https://www.credly.com/badges/929cda4a-0491-48a7-87d3-3f4f6d63d198/linked_in?t=tfhpg4",
       logoUrl: "https://www.google.com/s2/favicons?domain=aws.amazon.com&sz=128",
     },
     {
       name: "AWS Certified Developer – Associate",
       issuer: "Amazon Web Services",
-      href: "https://aws.amazon.com/certification/certified-developer-associate/",
+      href: "https://www.credly.com/badges/3c979bcf-f6d8-4f9e-8f9d-2ab6e4bb3f2d/linked_in?t=tagumj",
       logoUrl: "https://www.google.com/s2/favicons?domain=aws.amazon.com&sz=128",
     },
     {
