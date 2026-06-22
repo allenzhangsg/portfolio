@@ -78,6 +78,12 @@ export const DATA = {
   ],
   certifications: [
     {
+      name: "AWS Certified Solutions Architect – Professional",
+      issuer: "Amazon Web Services",
+      href: "https://www.credly.com/badges/e12f455d-d483-47b5-8aa2-3612ccbc6c5d/public_url",
+      logoUrl: "https://www.google.com/s2/favicons?domain=aws.amazon.com&sz=128",
+    },
+    {
       name: "AWS Certified Solutions Architect – Associate",
       issuer: "Amazon Web Services",
       href: "https://www.credly.com/badges/929cda4a-0491-48a7-87d3-3f4f6d63d198/linked_in?t=tfhpg4",
