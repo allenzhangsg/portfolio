@@ -237,7 +237,7 @@
       <span class="entry-position">Software Engineer</span>
       <span class="entry-meta">Melbourne, Australia</span>
     </div>
-    <p class="entry-sub">Sole software engineer; end-to-end owner across design, build, and operations.</p>
+    <p class="entry-sub">End-to-end owner of the data platform's pipeline and application layer — design, build, and operations — in a small platform team.</p>
     <ul>
       <li><strong>Multi-tenant Insights Platform</strong> — built an embedded-QuickSight analytics product for automotive dealers across four microservices (configuration, authoriser, visualisation, delivery) behind a React/Auth0 frontend. Designed two-layer authorisation: a capability tree gating modules and routes, plus user-based row-level security via an S3-backed RLS table — OEM tenants stay isolated when sharing datasets, and every backend rechecks against the authoriser.</li>
       <li><strong>Event-driven self-scheduled reports</strong> — built a report-scheduling system on EventBridge Scheduler with definitions in DynamoDB and asynchronous QuickSight snapshot generation. Re-validated user access at delivery time (not creation time), so revoked users stopped receiving reports immediately. Handed off to a separate delivery service via cross-account IAM.</li>
