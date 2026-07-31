@@ -217,7 +217,7 @@
 <section>
   <h2>Summary</h2>
   <p>
-    Software engineer with 5+ years building distributed systems on AWS, data ETL pipelines, and full-stack
+    Software engineer with 6+ years building distributed systems on AWS, data ETL pipelines, and full-stack
     applications at Connexion Mobility, Tesla, and Meituan. Currently shipping a side project,
     Sigmise — a cross-platform AI meeting copilot spanning backend, Electron desktop client,
     Next.js marketing site, CI/CD, and self-hosted observability. Strong in real-time systems, AI/LLM
@@ -237,12 +237,14 @@
       <span class="entry-position">Software Engineer</span>
       <span class="entry-meta">Melbourne, Australia</span>
     </div>
-    <p class="entry-sub">End-to-end owner of the data platform's pipeline and application layer — design, build, and operations — in a small platform team.</p>
+    <p class="entry-sub">Only software engineer on a three-person platform team; end-to-end owner of the platform and application layer — architecture, build, infrastructure, and production operations. Direct engineering contact for OEM stakeholders including GM, who consolidated additional reporting workloads onto the platform from an incumbent vendor.</p>
     <ul>
-      <li><strong>Multi-tenant Insights Platform</strong> — built an embedded-QuickSight analytics product for automotive dealers across four microservices (configuration, authoriser, visualisation, delivery) behind a React/Auth0 frontend. Designed two-layer authorisation: a capability tree gating modules and routes, plus user-based row-level security via an S3-backed RLS table — OEM tenants stay isolated when sharing datasets, and every backend rechecks against the authoriser.</li>
-      <li><strong>Event-driven self-scheduled reports</strong> — built a report-scheduling system on EventBridge Scheduler with definitions in DynamoDB and asynchronous QuickSight snapshot generation. Re-validated user access at delivery time (not creation time), so revoked users stopped receiving reports immediately. Handed off to a separate delivery service via cross-account IAM.</li>
-      <li><strong>Data-pipeline tier (~20 pipelines)</strong> — owned the report-data service with ~20 pipelines across three compute models matched to workload shape: long, stateful batch on ECS Fargate (EventBridge-triggered, scale-to-zero); bursty event-driven work on Lambda; data-lake catalogue upkeep via Glue Crawler. Each pipeline ships as an independent ECS task provisioned via AWS CDK, with its own Sentry cron monitor — missed runs alert separately from failed runs.</li>
-      <li><strong>Real-time audit pipeline</strong> — built an immutable GM compliance audit store with strict per-VIN ordering: MongoDB Change Streams → EventBridge → SQS FIFO (with DLQ) → Lambda → DynamoDB, indexed by a timestamp GSI for range queries.</li>
+      <li><strong>Legacy account migration</strong> — led the migration of ten business-critical OEM reports off a legacy AWS account onto the analytics platform account, transparent to downstream consumers and with no interruption to reporting. Rebuilt rather than lifted: TypeScript throughout, configuration moved into SSM Parameter Store, unit and integration tests gated in CI behind SonarQube, per-workload monitoring where the legacy stack had none, and a written cutover spec so downstream teams migrated against a document rather than tribal knowledge.</li>
+      <li><strong>Multi-tenant Insights Platform</strong> — built an embedded-QuickSight analytics product for automotive dealers across four microservices (configuration, authoriser, visualisation, delivery) behind a React/Auth0 frontend I own. Two-layer authorisation: a capability tree gating modules and routes, plus user-based row-level security via an S3-backed RLS table — OEM tenants stay isolated when sharing datasets, and every backend rechecks against the authoriser rather than trusting the caller. Self-service report scheduling on EventBridge Scheduler re-validates access at delivery time, not creation time, so revoked users stop receiving reports immediately.</li>
+      <li><strong>Cross-account private API</strong> — backend API over Athena and DynamoDB exposed as an API Gateway private endpoint, reachable only through Interface VPC Endpoints from the platform account's shared VPC and authenticated with SigV4 IAM roles rather than long-lived credentials. Consumed by the company's main product portal for in-product metrics and report downloads, against published API documentation that lets consuming teams self-onboard. A DynamoDB caching layer keyed to the actual query patterns cut latency on Athena-backed reads from ~10s to ~2s.</li>
+      <li><strong>Data-pipeline tier (~30 pipelines)</strong> — three compute models matched to workload shape: long, stateful batch on ECS Fargate (EventBridge-triggered, scale-to-zero); bursty event-driven work on Lambda; data-lake catalogue upkeep via Glue Crawler. Each pipeline ships as an independent unit provisioned via AWS CDK with its own Sentry monitor — missed runs alert separately from failed runs — running at roughly one failure across the tier every six months.</li>
+      <li><strong>Real-time MongoDB ingestion</strong> — built an immutable GM compliance audit store with strict per-VIN ordering: Change Streams → EventBridge → SQS FIFO (with DLQ) → Lambda → DynamoDB, indexed by a timestamp GSI for range queries; and a streaming path from the same metadata store into S3 for the data lake.</li>
+      <li><strong>Usage instrumentation &amp; cost</strong> — instrumented the Insights frontend with PostHog to see which dashboards were actually being used, and built a CloudTrail-driven service on ECS that tracks QuickSight activity in DynamoDB and reports to Slack — reclaiming ~50 seats a month idle for 30+ days and cutting that licence spend by ~US$1k/month.</li>
     </ul>
   </div>
 
@@ -314,7 +316,7 @@
     <div>Vercel AI SDK, OpenRouter, Gemini, Azure Speech, Deepgram, prompt engineering</div>
 
     <div class="label">Cloud &amp; Ops</div>
-    <div>AWS (Lambda, ECS, S3, Glue, DynamoDB, API Gateway, EventBridge, Athena, IAM, QuickSight, Amplify), Cloudflare R2, Docker, Kubernetes, GitHub Actions, Coolify, IaC, CI/CD; Prometheus, Grafana, CloudWatch, Sentry, Alertmanager</div>
+    <div>AWS (Lambda, ECS, S3, Glue, DynamoDB, API Gateway, EventBridge, Athena, IAM, VPC/PrivateLink, CloudTrail, SSM, QuickSight, Amplify, CDK), Cloudflare R2, Docker, Kubernetes, GitHub Actions, Coolify, IaC, CI/CD; Prometheus, Grafana, CloudWatch, Sentry, PostHog, SonarQube, Alertmanager</div>
 
     <div class="label">Data Engineering</div>
     <div>Apache Spark, Hadoop, Apache Doris, MongoDB, Redis, ClickHouse, Pandas, Airflow, Dimensional Modelling</div>
